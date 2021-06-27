@@ -46,7 +46,7 @@ window.location.replace(url);
     <body style="margin: 0; overflow: hidden;">
         <a-scene
 			cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
-			raycaster="objects: [clickhandler1, clickhandler2];"
+			raycaster="objects: [clickable];"
             renderer="logarithmicDepthBuffer: true;"
             embedded
             loading-screen="enabled: false;"
@@ -65,20 +65,34 @@ window.location.replace(url);
             </a-assets>
 
                 <a-entity
+					clickhandler1
                     look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset1"
                     scale="0.6633499408944072 0.6633499408944072 0.6633499408944072"
-                    gps-entity-place="latitude: 43.322434364; longitude: 21.898522917;"
-					clickhandler1
+                    gps-entity-place="latitude: 43.32252947797488; longitude: 21.898302368467085;"
+					clickable
                 ></a-entity>
-                <a-entity
+				
+				<a-entity
+					clickhandler1
                     look-at="[gps-camera]"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-asset12"
+                    scale="0.6633499408944072 0.6633499408944072 0.6633499408944072"
+                    gps-entity-place="latitude: 43.3225294; longitude: 21.8983023;"
+					clickable
+                ></a-entity>
+				
+				
+                <a-entity
+                    clickhandler2
+					look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset2"
                     scale="0.6633499408944072 0.6633499408944072 0.6633499408944072"
                     gps-entity-place="latitude: 43.32231703366236; longitude: 21.89834873653853;"
-					clickhandler2
+					clickable
                 ></a-entity>
 
             <a-camera gps-camera rotation-reader></a-camera>
